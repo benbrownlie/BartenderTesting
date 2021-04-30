@@ -16,10 +16,9 @@ public class RefillStationBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject _server;
         if (user.transform.position == usePoint.transform.position && Input.GetKeyDown(KeyCode.Space))
         {
-
+            user.GetComponent<ServeBehavior>().drinkCount++;
         }
     }
 }

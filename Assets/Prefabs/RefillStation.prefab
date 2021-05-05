@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155dd00c16ed682439dbf6c882930720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: {fileID: 8791653028157876646, guid: e3f52ea42ff904d4394b5c1caaee0ac1, type: 3}
-  userpoint: {fileID: 6211947082404459730}
+  user: {fileID: 1999529066003712632, guid: d27c3e670415a6d4fbe37d4bb5f30476, type: 3}
+  usePoint: {fileID: 6211947082404459730}
 --- !u!1 &6211947082404459730
 GameObject:
   m_ObjectHideFlags: 0

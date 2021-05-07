@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class PlayerMovementBehavior : MonoBehaviour
 {
-    public LinkedList<Transform> movePoints = new LinkedList<Transform>();
-
-    public float speed;
+    //Array used to store the points the player can move to
+    public Transform[] MovePoints = new Transform[3];
+    //The maximum amount of spaces the player can move
+    private int _moveMax = 3;
+    //The minimum amount of spaces the player can move
+    private int _moveMin = 3;
     public CharacterController characterController;
-    public Transform movePoint;
-    public Transform movePoint1;
-    public Transform movePoint2;
+    int i = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        movePoints.AddFirst(movePoint1);
-        movePoints.AddLast(movePoint2);
         characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-            characterController.transform.position = movePoints;
+        if (Input.GetKey(KeyCode.W) && i < _moveMax)
+        {
+            characterController.transform.position = MovePoints[i].transform.position;
+        }
     }
 }

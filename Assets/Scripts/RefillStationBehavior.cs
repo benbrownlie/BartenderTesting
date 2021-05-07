@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class RefillStationBehavior : MonoBehaviour
 {
+    //Reference to the object who can use the station
     public GameObject user;
+    //Reference to the point of interaction
     public GameObject usePoint;
 
     // Start is called before the first frame update
@@ -16,9 +18,11 @@ public class RefillStationBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (user.transform.position == usePoint.transform.position && Input.GetKeyDown(KeyCode.Space))
+        //Checks if the set use point and the user's positions are the same
+        if (usePoint.transform.position == user.transform.position)
         {
-            user.GetComponent<ServeBehavior>().drinkCount++;
+            ServeBehavior server = user.GetComponent<ServeBehavior>();
+            server.canServe = true;
         }
     }
 }

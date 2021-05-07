@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class PlayerMovementBehavior : MonoBehaviour
 {
+    public LinkedList<Transform> movePoints = new LinkedList<Transform>();
+
     public float speed;
     public CharacterController characterController;
+    public Transform movePoint;
+    public Transform movePoint1;
+    public Transform movePoint2;
 
     // Start is called before the first frame update
     void Start()
     {
+        movePoints.AddFirst(movePoint1);
+        movePoints.AddLast(movePoint2);
         characterController = GetComponent<CharacterController>();
     }
 
@@ -17,12 +24,6 @@ public class PlayerMovementBehavior : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.W))
-            characterController.SimpleMove(Vector3.left * speed);
-        if (Input.GetKey(KeyCode.S))
-            characterController.SimpleMove(Vector3.right * speed);
-        if (Input.GetKey(KeyCode.A))
-            characterController.SimpleMove(Vector3.back * speed);
-        if (Input.GetKey(KeyCode.D))
-            characterController.SimpleMove(Vector3.forward * speed);
+            characterController.transform.position = movePoints;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovementBehavior : MonoBehaviour
 {
@@ -20,18 +21,25 @@ public class PlayerMovementBehavior : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
+    public void Move(int direction)
+    {
+        i += direction;
+        i = Mathf.Clamp(i, 0, 2);
+        characterController.transform.position = MovePoints[i].transform.position;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && i < _moveMax)
-        {
-            i++;
-            characterController.transform.position = MovePoints[i].transform.position;
-        }
-        if (Input.GetKeyDown(KeyCode.S) && i > _moveMin)
-        {
-            i--;
-            characterController.transform.position = MovePoints[i].transform.position;
-        }
+        //if (Input.GetKeyDown(KeyCode.W) && i < _moveMax)
+        //{
+        //    i++;
+        //    characterController.transform.position = MovePoints[i].transform.position;
+        //}
+        //if (Input.GetKeyDown(KeyCode.S) && i > _moveMin)
+        //{
+        //    i--;
+        //    characterController.transform.position = MovePoints[i].transform.position;
+        //}
     }
 }

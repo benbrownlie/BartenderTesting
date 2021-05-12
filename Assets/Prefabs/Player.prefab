@@ -127,7 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9d62052eb555f4e906b4be1f7f3ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  MovePoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   characterController: {fileID: 1999529066003712638}
 --- !u!114 &1999529066003712611
 MonoBehaviour:
@@ -143,4 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   server: {fileID: 1999529066003712632}
   drink: {fileID: -7669771537549260010, guid: f7b1b2568586ac548a5f8a12b79cc6bc, type: 3}
-  drinkCount: 2
+  canServe: 0

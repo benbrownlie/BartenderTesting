@@ -31,15 +31,6 @@ public class PlayerMovementBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.W) && i < _moveMax)
-        //{
-        //    i++;
-        //    characterController.transform.position = MovePoints[i].transform.position;
-        //}
-        //if (Input.GetKeyDown(KeyCode.S) && i > _moveMin)
-        //{
-        //    i--;
-        //    characterController.transform.position = MovePoints[i].transform.position;
-        //}
+
     }
 }

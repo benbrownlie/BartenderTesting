@@ -22,7 +22,6 @@ public class RefillStationBehavior : MonoBehaviour
         if (usePoint.transform.position == user.transform.position)
         {
             ServeBehavior server = user.GetComponent<ServeBehavior>();
-            server.canServe = true;
         }
     }
 }

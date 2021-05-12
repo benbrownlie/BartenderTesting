@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Keg
   - KillPlane
+  - Customer
   layers:
   - Default
   - TransparentFX
